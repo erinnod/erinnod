@@ -1,4 +1,4 @@
-<h1>Hi, I'm Erin! <br/><a href="[https://github.com/erinnod]">Software Tester</a>
+<h1> <br/><a href="[https://github.com/erinnod]">Software Tester</a>
 
 <h2>👨‍💻 Software Development Projects:</h2>
 
