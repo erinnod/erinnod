@@ -3,6 +3,9 @@
 <h2>👨‍💻 Software Development Projects:</h2>
 
 - Youtube video downloader
+- Gym app
+- Nasa daily image app
+- To-do List
 
 
 <!--
