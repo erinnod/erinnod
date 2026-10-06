@@ -20,24 +20,24 @@ I build AI workflows that are still running after the demo ends.
 
 ### What I've shipped
 
-**Figma → spec agent** · *Claude Code, Figma MCP*
+**Figma → spec agent** · *Claude Code, Figma MCP*\
 Paste a Figma handoff and it reads every screen, then writes two reports in under two minutes: plain English for the client, technical for the developer. Every open question is backed by evidence from the design.
 
-**Shopify product automation** · *n8n, LLMs, Shopify Admin API* · live in production
+**Shopify product automation** · *n8n, LLMs, Shopify Admin API* · live in production\
 Product photos land in Google Drive, get cropped and re-backgrounded, an LLM writes titles and descriptions from the images, and a 25-node n8n workflow publishes them to Shopify for a client.
 
-**ASP.NET → Hono migration** · *Hono, Cloudflare Workers, Postgres, Drizzle*
+**ASP.NET → Hono migration** · *Hono, Cloudflare Workers, Postgres, Drizzle*\
 A strangler-fig toolkit for moving a legacy ASP.NET + SQL Server backend onto Cloudflare Workers one endpoint at a time, with responses matched byte for byte so the client can't tell which backend answered. On a production CRM it moved 200+ endpoints and 130+ tables while the app stayed fully usable. Paired with a migration agent that crawls the legacy app, reads the solution and has Claude Code write the rebuild plan.
 
-**Life-OS** · *Python, Raspberry Pi 5, Telegram* · running daily since May 2026
+**Life-OS** · *Python, Raspberry Pi 5, Telegram* · running daily since May 2026\
 A personal AI operating system on a Raspberry Pi. It reads a 132-note Obsidian vault, runs 18 scheduled jobs and hands work to five specialist agents, then sends one message at 06:00: exactly two tasks, each tied to a quarterly goal.
 
 ### Currently building
 
-**Talus** · *Expo, React Native, Supabase, Mapbox*
+**Talus** · *Expo, React Native, Supabase, Mapbox*\
 An offline-first bouldering tracker for climbers who log at the crag with cold hands and no signal, with a coach that builds session plans from your own log.
 
-**RAG support assistant** · *Python, Chroma, Claude*
+**RAG support assistant** · *Python, Chroma, Claude*\
 Answers questions grounded in a specific document set, with every answer traceable back to its source chunks.
 
 ### How I build
