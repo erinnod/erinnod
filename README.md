@@ -18,32 +18,33 @@ I build AI workflows that are still running after the demo ends.
 
 ---
 
+### What I do
+
+- **For clients:** complete software solutions, from full applications to the AI workflows that run inside them.
+- **In-house:** the internal tools and AI systems the team uses every day.
+
+Most of that work is private, so each project below links to an overview repo that explains what it does and how it's built.
+
 ### What I've shipped
 
-**Figma → spec agent** · *Claude Code, Figma MCP*\
-Paste a Figma handoff and it reads every screen, then writes two reports in under two minutes: plain English for the client, technical for the developer. Every open question is backed by evidence from the design.
+**[Talus](https://github.com/erinnod/talus-app)** · *React Native, Expo, Supabase, Mapbox* · live on the App Store\
+An offline-first bouldering log for climbers who log at the crag with no signal, with a statistical coach that tells you what to work on next and a community map of over 10,000 spots.
+
+**[Figma → spec agent](https://github.com/erinnod/figma-spec-agent)** · *Claude Code, Figma MCP*\
+Paste a Figma handoff and it reads every screen, then writes two reports: plain English for the client, technical for the developer. Every open question is backed by evidence from the design.
 
 **Shopify product automation** · *n8n, LLMs, Shopify Admin API* · live in production\
 Product photos land in Google Drive, get cropped and re-backgrounded, an LLM writes titles and descriptions from the images, and a 25-node n8n workflow publishes them to Shopify for a client.
 
-**ASP.NET → Hono migration** · *Hono, Cloudflare Workers, Postgres, Drizzle*\
-A strangler-fig toolkit for moving a legacy ASP.NET + SQL Server backend onto Cloudflare Workers one endpoint at a time, with responses matched byte for byte so the client can't tell which backend answered. On a production CRM it moved 200+ endpoints and 130+ tables while the app stayed fully usable. Paired with a migration agent that crawls the legacy app, reads the solution and has Claude Code write the rebuild plan.
+**[ASP.NET → Hono migration](https://github.com/erinnod/aspnet-to-hono)** · *Hono, Cloudflare Workers, Postgres, Drizzle*\
+A strangler-fig toolkit for moving a legacy ASP.NET + SQL Server backend onto Cloudflare Workers one endpoint at a time, with responses matched byte for byte. On a production CRM it moved 200+ endpoints and 130+ tables while the app stayed fully usable.
 
-**Life-OS** · *Python, Raspberry Pi 5, Telegram* · running daily since May 2026\
+**[Life-OS](https://github.com/erinnod/life-os-agent)** · *Python, Raspberry Pi 5, Telegram* · running daily since May 2026\
 A personal AI operating system on a Raspberry Pi. It reads a 132-note Obsidian vault, runs 18 scheduled jobs and hands work to five specialist agents, then sends one message at 06:00: exactly two tasks, each tied to a quarterly goal.
-
-### Currently building
-
-**Talus** · *Expo, React Native, Supabase, Mapbox*\
-An offline-first bouldering tracker for climbers who log at the crag with cold hands and no signal, with a coach that builds session plans from your own log.
-
-**RAG support assistant** · *Python, Chroma, Claude*\
-Answers questions grounded in a specific document set, with every answer traceable back to its source chunks.
 
 ### How I build
 
 - **Track delivery, not just execution.** Life-OS once had jobs firing with nothing arriving. Now delivery is tracked, so a green check can't hide a broken system.
 - **Plan for models disappearing.** The daily model rotator won't save a new list unless at least three fallbacks survive.
 - **Only spend tokens on judgement.** Jobs that don't need an LLM run as plain scripts, so half the schedule costs nothing.
-
-<sub>Most of this is client or personal work in private repos. Happy to walk through any of it.</sub>
+- **Make the stats earn their claims.** Talus's coach only says something when the sample size can back it up.
