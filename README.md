@@ -1,7 +1,6 @@
 ## Hi, I'm Erin
 
-Software developer in Birmingham.
-I build AI workflows that are still running after the demo ends.
+I'm a software developer in Birmingham. I build software for clients, from full apps to the AI workflows that run inside them, and I build internal tools and AI systems for the team I work in. These days most of what I do is AI: agents, automations and everything around them that keeps them running.
 
 [Portfolio](https://portfolio-two-xi-95.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/erin-nodland/)
 
@@ -16,35 +15,23 @@ I build AI workflows that are still running after the demo ends.
 ![Postgres](https://img.shields.io/badge/Postgres-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white)
 
----
+### Things I've built
 
-### What I do
+Most of my work is private, so the links go to write-ups rather than code.
 
-- **For clients:** complete software solutions, from full applications to the AI workflows that run inside them.
-- **In-house:** the internal tools and AI systems the team uses every day.
+**[Talus](https://github.com/erinnod/talus-app)**: a bouldering log app, live on the App Store. It works offline at the crag, syncs later, and has a coach that looks at your sessions and tells you what to work on. *React Native, Expo, Supabase*
 
-Most of that work is private, so each project below links to an overview repo that explains what it does and how it's built.
+**[Figma → spec agent](https://github.com/erinnod/figma-spec-agent)**: give it a Figma link and it goes through every screen and writes up the questions that need answering before anyone starts building. One set for the client in plain English, one for the developer, and each question points at the part of the design that raised it. *Claude Code, Figma MCP*
 
-### What I've shipped
+**Shopify product automation**: live for a client. Product photos go into Google Drive, get cropped and have the background swapped, an LLM writes the titles and descriptions from the photos, and a 25-node n8n workflow puts them on Shopify. *n8n, LLMs, Shopify Admin API*
 
-**[Talus](https://github.com/erinnod/talus-app)** · *React Native, Expo, Supabase, Mapbox* · live on the App Store\
-An offline-first bouldering log for climbers who log at the crag with no signal, with a statistical coach that tells you what to work on next and a community map of over 10,000 spots.
+**[ASP.NET → Hono migration](https://github.com/erinnod/aspnet-to-hono)**: moving an old ASP.NET + SQL Server backend onto Cloudflare Workers one endpoint at a time, so the app never goes down. On a production CRM it moved 200+ endpoints and 130+ tables while people were still using it. *Hono, Cloudflare Workers, Postgres, Drizzle*
 
-**[Figma → spec agent](https://github.com/erinnod/figma-spec-agent)** · *Claude Code, Figma MCP*\
-Paste a Figma handoff and it reads every screen, then writes two reports: plain English for the client, technical for the developer. Every open question is backed by evidence from the design.
+**[Life-OS](https://github.com/erinnod/life-os-agent)**: my own AI assistant running on a Raspberry Pi. It reads my Obsidian vault, runs 18 scheduled jobs across five agents and sends me one Telegram message at 6am with two things to do that day, each tied to a goal. It's been running every day since May. *Python, Raspberry Pi 5, Telegram*
 
-**Shopify product automation** · *n8n, LLMs, Shopify Admin API* · live in production\
-Product photos land in Google Drive, get cropped and re-backgrounded, an LLM writes titles and descriptions from the images, and a 25-node n8n workflow publishes them to Shopify for a client.
+### Things I've learnt the hard way
 
-**[ASP.NET → Hono migration](https://github.com/erinnod/aspnet-to-hono)** · *Hono, Cloudflare Workers, Postgres, Drizzle*\
-A strangler-fig toolkit for moving a legacy ASP.NET + SQL Server backend onto Cloudflare Workers one endpoint at a time, with responses matched byte for byte. On a production CRM it moved 200+ endpoints and 130+ tables while the app stayed fully usable.
-
-**[Life-OS](https://github.com/erinnod/life-os-agent)** · *Python, Raspberry Pi 5, Telegram* · running daily since May 2026\
-A personal AI operating system on a Raspberry Pi. It reads a 132-note Obsidian vault, runs 18 scheduled jobs and hands work to five specialist agents, then sends one message at 06:00: exactly two tasks, each tied to a quarterly goal.
-
-### How I build
-
-- **Track delivery, not just execution.** Life-OS once had jobs firing with nothing arriving. Now delivery is tracked, so a green check can't hide a broken system.
-- **Plan for models disappearing.** The daily model rotator won't save a new list unless at least three fallbacks survive.
-- **Only spend tokens on judgement.** Jobs that don't need an LLM run as plain scripts, so half the schedule costs nothing.
-- **Make the stats earn their claims.** Talus's coach only says something when the sample size can back it up.
+- A job running isn't the same as a message arriving. Life-OS had a silent outage where everything looked fine and nothing got sent, so now it checks delivery.
+- Models get pulled. Life-OS won't save its daily model list unless at least three fallbacks still work.
+- Don't use an LLM where a script will do. About half of Life-OS's jobs are plain scripts and cost nothing to run.
+- Stats need enough data behind them. The Talus coach stays quiet until it has enough sessions to back up what it's saying.
