@@ -1,6 +1,6 @@
 ## Hi, I'm Erin
 
-Software developer at [Shoothill](https://www.shoothill.com) in Birmingham.
+Software developer in Birmingham.
 I build AI workflows that are still running after the demo ends.
 
 [Portfolio](https://portfolio-two-xi-95.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/erin-nodland/)
